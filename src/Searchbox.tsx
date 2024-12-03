@@ -15,12 +15,12 @@ export default function Searchbox() {
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const inputHandler = (e) => {
+  const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value.toLowerCase());
     setSelectedIndex(0);
   };
 
-  const keyPressHandler = (e) => {
+  const keyPressHandler = (e: React.KeyboardEvent) => {
     if (e.key == "Enter") {
       if (query.length > 1) openSearchResult();
     } else if (e.key == "ArrowDown") {

@@ -1,4 +1,4 @@
-export default function AchievementCard({ name, from, description, visible }) {
+export default function AchievementCard({ name, from, description, visible}: { name: string, from: string, description: string, visible: boolean }) {
     if (visible) {
       return (
           <div className="flex flex-col p-4 rounded-xl bg-slate-50">

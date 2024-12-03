@@ -1,4 +1,4 @@
-export default function SearchResult(props) {
+export default function SearchResult(props: { info: { name: string; url: string}; selected: boolean }) {
   const info = props.info;
   const selected = props.selected;
 

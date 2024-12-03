@@ -1,4 +1,4 @@
-export default function SmallTextCard({ name, strong=false }) {
+export default function SmallTextCard({ name, strong=false } : {name: string, strong: boolean | undefined}) {
     return (
       <>
         <div className={strong ? "card-strong" : "card-shaded"}>

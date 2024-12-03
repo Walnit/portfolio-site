@@ -1,4 +1,4 @@
-export default function ProjectCard({ title, desc, img, selected, onClick }) {
+export default function ProjectCard({ title, desc, img, selected, onClick } : { title : string, desc : string, img : string, selected : boolean, onClick : () => void }) {
   if (selected) {
     return (
       <button className="p-4 bg-red-50 rounded-xl" onClick={onClick}>

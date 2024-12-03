@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ProjectCard from "./ProjectCard";
 import AchievementCard from "./AchievementCard";
 
 export default function Achievements() {
