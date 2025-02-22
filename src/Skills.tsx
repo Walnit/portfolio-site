@@ -39,20 +39,20 @@ export default function Skills() {
         id="skills"
         className="flex flex-col justify-center items-center w-5/6 h-svh snap-start shrink-0"
       >
-        <img className="w-48" src="lightbulb.png" alt="lightbulb" />
-        <h1 className="text-5xl font-bold text-red-900">Still learning.</h1>
+        <img className="w-16 md:w-48" src="lightbulb.png" alt="lightbulb" />
+        <h1 className="text-3xl font-bold text-red-900 md:text-5xl">Still learning.</h1>
         <p className="pt-4 text-xl text-center">
           I love trying different things out! Here's a list of some things
           I've picked up along the way.
         </p>
         <p className="py-2 text-xl"><span className="px-2 text-red-900">•</span>Preferred<span className="px-2 pl-4 text-red-50">•</span>Additional Skills</p>
         <div className="py-4"></div>
-        <div className="flex flex-row flex-wrap gap-2">
+        <div className="flex flex-row flex-wrap gap-2 justify-center py-4">
           {languages.map((info) => (
             <SmallTextCard name={info.name} strong={info.preferred} />
           ))}
         </div>
-        <div className="flex flex-row flex-wrap gap-2 justify-center py-4">
+        <div className="flex overflow-x-scroll flex-row flex-wrap gap-2 justify-center py-4 max-h-1/4">
           {frameworks.map((info) => (
             <SmallTextCard name={info.name} strong={info.preferred} />
           ))}

@@ -18,8 +18,8 @@ function App() {
       <div id="padder" className="flex overflow-y-scroll flex-col items-center w-screen h-screen snap-y snap-proximity">
         <Hero />
         <About />
-        {/* <Skills />
-        <Achievements />
+        <Skills />
+        {/* <Achievements />
         <Projects />
         <Footer /> */}
       </div>
