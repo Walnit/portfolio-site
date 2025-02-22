@@ -3,23 +3,23 @@ export default function About() {
     <>
       <div
         id="about"
-        className="flex flex-row justify-center items-center w-5/6 h-svh snap-start shrink-0"
+        className="flex flex-col justify-center items-center w-5/6 md:flex-row h-svh snap-start shrink-0"
       >
-        <div className="flex flex-col w-1/3">
+        <div className="flex flex-col md:w-1/3">
           <img className="" src="portrait.jpg" alt="portrait" />
-          <p className="mt-2 text-xl font-bold text-center text-red-900 opacity-50">
+          <p className="mt-2 font-bold text-center text-red-900 opacity-50 md:text-xl">
             Vacation at Cameron Highlands, Malaysia (2024)
           </p>
         </div>
-        <div className="flex flex-col justify-center p-32 w-2/3">
-          <h1 className="py-4 text-5xl font-bold text-center text-red-900">
+        <div className="flex flex-col justify-center md:w-2/3 md:p-16 xl:p-32">
+          <h1 className="py-4 text-3xl font-bold text-center text-red-900 md:text-5xl">
             That's Me!
           </h1>
           <p className="text-xl text-center">
             I'm a 17-year-old studying at NUS High School of Math and Science.
           </p>
           <p className="text-xl text-center">
-            Currently an ExCo member of AppVenture, NUSH's CS Interest Group, as well
+            Currently President of AppVenture, NUSH's CS Interest Group, as well
             as a Cadet Officer of the National Cadet Corps.
           </p>
           <p className="pt-2 text-xl text-center">
