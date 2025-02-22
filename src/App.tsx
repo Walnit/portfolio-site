@@ -19,8 +19,8 @@ function App() {
         <Hero />
         <About />
         <Skills />
-        {/* <Achievements />
-        <Projects />
+        <Achievements />
+        {/* <Projects />
         <Footer /> */}
       </div>
     </>

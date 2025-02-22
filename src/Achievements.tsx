@@ -1,8 +1,10 @@
 import { useState } from "react";
 import AchievementCard from "./AchievementCard";
+import useWindowDimensions from "./ResponsiveHandler";
 
 export default function Achievements() {
   const [expand, setExpand] = useState(false);
+  const { _, width } = useWindowDimensions();
   const achievements = [
     {
       name: "CSIT Computing Scholarship",
@@ -42,7 +44,7 @@ export default function Achievements() {
         className="flex flex-col justify-center items-center w-5/6 h-svh snap-start shrink-0"
       >
         <div className="flex flex-col justify-center items-center w-full h-5/6">
-          <h1 className="text-5xl font-bold text-center text-red-900">
+          <h1 className="text-3xl font-bold text-center text-red-900 md:text-5xl">
             Achievements
           </h1>
           <p className="pt-4 text-xl text-center">
@@ -57,19 +59,19 @@ export default function Achievements() {
             .
           </p>
           {/* TODO: ADD TRANSITIONS */}
-          <div className="flex flex-row items-center py-4 my-4">
-            <div className="grid grid-cols-2 gap-2 w-full transition-all">
+          <div className="flex flex-row items-center py-4 my-4 w-full y-1/2 md:h-3/5">
+            <div className="flex overflow-x-scroll flex-row flex-nowrap gap-2 w-full max-h-full transition-all md:overflow-y-scroll snap-x snap-mandatory md:grid md:grid-cols-2">
               {achievements.map((achievement, i) => (
                 <AchievementCard
                   name={achievement.name}
                   from={achievement.from}
                   description={achievement.description}
-                  visible={expand || i < 2}
+                  visible={expand || width < 768 || i < 2}
                 />
               ))}
             </div>
           </div>
-          <button className="px-8 py-4 mt-4 text-xl font-bold bg-red-50 rounded-xl hover:bg-red-100" onClick={() => setExpand(!expand)}>
+          <button className="hidden px-8 py-4 mt-4 text-xl font-bold bg-red-50 rounded-xl md:block hover:bg-red-100" onClick={() => setExpand(!expand)}>
             <div className="flex flex-row">
               <svg
                 className="w-[24px] fill-red-950"
