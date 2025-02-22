@@ -3,7 +3,7 @@ export default function About() {
     <>
       <div
         id="about"
-        className="flex flex-col justify-center items-center w-5/6 md:flex-row h-svh snap-center shrink-0"
+        className="flex flex-col justify-center items-center w-5/6 md:flex-row h-svh shrink-0"
       >
         <div className="flex flex-col md:w-1/3">
           <img className="" src="portrait.jpg" alt="portrait" />

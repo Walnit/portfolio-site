@@ -3,7 +3,7 @@ import Searchbox from "./Searchbox";
 export default function Hero() {
   return (
     <>
-      <div id="hero" className="flex flex-col justify-center w-5/6 h-svh snap-start shrink-0">
+      <div id="hero" className="flex flex-col justify-center w-5/6 h-svh shrink-0">
         <div className="space-y-1 h-2/3 text-3xl md:text-5xl">
           <h1>Hi! I'm Yue Heng.</h1>
           <h1 className="font-bold text-red-900">How can I help you today?</h1>

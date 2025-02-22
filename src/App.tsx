@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <div id="padder" className="flex overflow-y-scroll flex-col items-center w-screen h-screen snap-y snap-proximity">
+      <div id="padder" className="flex overflow-y-scroll flex-col items-center w-screen h-screen">
         <Hero />
         <About />
         <Skills />

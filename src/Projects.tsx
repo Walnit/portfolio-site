@@ -57,7 +57,7 @@ export default function Projects() {
     <>
       <div
         id="projects"
-        className="flex flex-col justify-center items-center w-5/6 h-svh snap-center shrink-0"
+        className="flex flex-col justify-center items-center w-5/6 h-svh shrink-0"
       >
         <div className="w-full h-5/6">
           <h1 className="text-3xl font-bold text-center text-red-900 md:text-5xl">
