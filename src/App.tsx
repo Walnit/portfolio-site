@@ -17,11 +17,11 @@ function App() {
       <NavBar />
       <div id="padder" className="flex overflow-y-scroll flex-col items-center w-screen h-screen snap-y snap-proximity">
         <Hero />
-        <About />
+        {/* <About />
         <Skills />
         <Achievements />
         <Projects />
-        <Footer />
+        <Footer /> */}
       </div>
     </>
   );

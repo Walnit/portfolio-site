@@ -54,13 +54,13 @@ export default function Searchbox() {
           <SearchResult info={info} selected={selIdx == itemIdx} />
         ));
         return (
-          <div className="flex flex-col pb-4 text-4xl">
+          <div className="flex flex-col pb-4 text-2xl md:text-4xl">
             {renderedSearchResults}
           </div>
         );
       } else {
         return (
-          <p className="gap-4 py-4 pl-24 text-4xl text-neutral-400">
+          <p className="py-2 pl-16 text-2xl md:gap-4 md:py-4 md:pl-24 md:text-4xl text-neutral-400">
             No results found
           </p>
         );
@@ -81,12 +81,12 @@ export default function Searchbox() {
           onChange={inputHandler}
           onKeyDown={keyPressHandler}
           type="text"
-          className="py-6 pl-24 w-full text-4xl bg-transparent rounded-xl outline-none placeholder:text-neutral-400"
+          className="py-4 pl-16 w-full text-2xl bg-transparent rounded-xl md:py-6 md:pl-24 md:text-4xl outline-hidden placeholder:text-neutral-400"
           placeholder="Look for anything..."
         ></input>
-        <div className="flex absolute top-4 left-8 items-center fill-neutral-400">
+        <div className="flex absolute top-4 left-4 items-center md:left-8 fill-neutral-400">
           <svg
-            className="w-12"
+            className="w-8 md:w-12"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -94,7 +94,6 @@ export default function Searchbox() {
           </svg>
         </div>
         {renderSearchResults(query)}
-        {/* <SearchResults query={query} openSearchResult={openSearchResult} /> */}
       </div>
     </>
   );

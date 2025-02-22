@@ -36,7 +36,7 @@ export default function NavBar() {
     let label = <></>;
     if (info["showText"]) {
       label = (
-        <p className="pr-[8px] tracking-wider opacity-50 text-red-950">
+        <p className="pr-[8px] tracking-wider opacity-50 text-red-950 hidden hidden md:block">
           {info["name"]}
         </p>
       );
