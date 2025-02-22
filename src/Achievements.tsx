@@ -1,10 +1,10 @@
 import { useState } from "react";
 import AchievementCard from "./AchievementCard";
-import useWindowDimensions from "./ResponsiveHandler";
+import getWindowWidth from "./ResponsiveHandler";
 
 export default function Achievements() {
   const [expand, setExpand] = useState(false);
-  const { _, width } = useWindowDimensions();
+  const width = getWindowWidth();
   const achievements = [
     {
       name: "CSIT Computing Scholarship",
@@ -63,6 +63,7 @@ export default function Achievements() {
             <div className="flex overflow-x-scroll flex-row flex-nowrap gap-2 w-full max-h-full transition-all md:overflow-y-scroll snap-x snap-mandatory md:grid md:grid-cols-2">
               {achievements.map((achievement, i) => (
                 <AchievementCard
+                  key={i}
                   name={achievement.name}
                   from={achievement.from}
                   description={achievement.description}

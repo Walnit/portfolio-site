@@ -48,13 +48,13 @@ export default function Skills() {
         <p className="py-2 text-xl"><span className="px-2 text-red-900">•</span>Preferred<span className="px-2 pl-4 text-red-50">•</span>Additional Skills</p>
         <div className="py-4"></div>
         <div className="flex flex-row flex-wrap gap-2 justify-center py-4">
-          {languages.map((info) => (
-            <SmallTextCard name={info.name} strong={info.preferred} />
+          {languages.map((info, i) => (
+            <SmallTextCard key={i} name={info.name} strong={info.preferred} />
           ))}
         </div>
         <div className="flex overflow-x-scroll flex-row flex-wrap gap-2 justify-center py-4 max-h-1/4">
-          {frameworks.map((info) => (
-            <SmallTextCard name={info.name} strong={info.preferred} />
+          {frameworks.map((info, i) => (
+            <SmallTextCard key={i} name={info.name} strong={info.preferred} />
           ))}
         </div>
       </div>

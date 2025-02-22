@@ -67,6 +67,7 @@ export default function Projects() {
             <div className="flex overflow-x-scroll flex-row gap-2 pr-1 w-full h-auto h-1/3 md:flex-col md:w-1/3 md:h-full">
               {projects.map((project, i) => (
                 <ProjectCard
+                  key={i}
                   title={project.name}
                   desc={project.description}
                   img={project.icon}
@@ -84,6 +85,7 @@ export default function Projects() {
               </h2>
               <img
                 src={projects[selectedProject].image}
+                alt={projects[selectedProject].name}
                 className="object-contain py-4 w-full md:w-auto md:h-80"
               ></img>
               <p className="md:text-xl">{projects[selectedProject].writeup}</p>

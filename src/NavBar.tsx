@@ -32,7 +32,7 @@ export default function NavBar() {
     },
   ];
 
-  const renderedNavBarItems = navBarItems.map((info) => {
+  const renderedNavBarItems = navBarItems.map((info, i) => {
     let label = <></>;
     if (info["showText"]) {
       label = (
@@ -43,6 +43,7 @@ export default function NavBar() {
     }
     return (
       <a
+        key={i}
         className="flex flex-row justify-center items-center p-[8px] rounded-xl transition hover:bg-red-50"
         href={info["link"]}
         title={info["name"]}
