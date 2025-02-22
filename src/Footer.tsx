@@ -3,7 +3,7 @@ export default function Footer() {
     <>
       <div
         id="footer"
-        className="flex flex-col justify-center items-center py-4 w-full bg-red-900 snap-start shrink-0"
+        className="flex flex-col justify-center items-center py-4 w-full bg-red-900 snap-end shrink-0"
       >
         <div className="flex flex-col w-5/6">
           <p className="py-2 text-xl font-bold text-white">Contact</p>

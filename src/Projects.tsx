@@ -57,14 +57,14 @@ export default function Projects() {
     <>
       <div
         id="projects"
-        className="flex flex-col justify-center items-center w-5/6 h-svh snap-start shrink-0"
+        className="flex flex-col justify-center items-center w-5/6 h-svh snap-center shrink-0"
       >
         <div className="w-full h-5/6">
-          <h1 className="text-5xl font-bold text-center text-red-900">
+          <h1 className="text-3xl font-bold text-center text-red-900 md:text-5xl">
             Projects
           </h1>
-          <div className="flex flex-row items-center my-4 h-5/6">
-            <div className="flex overflow-auto flex-col gap-2 pr-1 w-1/3 h-full">
+          <div className="flex flex-col items-center my-4 h-full md:h-5/6 md:flex-row">
+            <div className="flex overflow-x-scroll flex-row gap-2 pr-1 w-full h-auto h-1/3 md:flex-col md:w-1/3 md:h-full">
               {projects.map((project, i) => (
                 <ProjectCard
                   title={project.name}
@@ -75,18 +75,18 @@ export default function Projects() {
                 />
               ))}
             </div>
-            <div className="p-8 w-2/3 h-full">
-              <h1 className="text-3xl font-bold">
+            <div className="overflow-y-scroll flex-1 p-8 md:flex-none md:h-full md:w-2/3">
+              <h1 className="text-2xl font-bold md:text-3xl">
                 {projects[selectedProject].name}
               </h1>
-              <h2 className="text-xl font-light">
+              <h2 className="font-light md:text-xl">
                 {projects[selectedProject].subtitle}
               </h2>
               <img
                 src={projects[selectedProject].image}
-                className="py-4 h-80"
+                className="object-contain py-4 w-full md:w-auto md:h-80"
               ></img>
-              <p className="text-xl">{projects[selectedProject].writeup}</p>
+              <p className="md:text-xl">{projects[selectedProject].writeup}</p>
               <a href={projects[selectedProject].link} target="_blank">
               <button className="px-8 py-4 mt-4 text-xl font-bold bg-red-50 rounded-xl">
                 <div className="flex flex-row">
